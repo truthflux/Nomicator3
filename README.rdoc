@@ -1,11 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This is my re-attempt at an online Nomic plaftorm now using Ruby 2.1
 
 * Ruby version
+2.1.3
+
+#TODO Proper documentation here
 
 * System dependencies
 
@@ -20,9 +20,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
