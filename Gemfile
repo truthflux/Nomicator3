@@ -20,9 +20,12 @@ end
 gem 'rails', '4.0.8'
 # Use postgresql as the database for Active Record
 gem 'pg', '0.15.1'
-# Use SCSS for stylesheets
+# Use SCSS for stylesheets, Bootstrap and fix sprockets version (Rails asset pipeline)
 gem 'sass-rails', '4.0.3'
-# Use Uglifier as compressor for JavaScript assets
+gem 'bootstrap-sass', '3.2.0.2'
+gem 'sprockets', '2.11.0'
+
+# Use Uglifier as com.buttonpressor for JavaScript assets
 gem 'uglifier', '2.1.1'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.1'

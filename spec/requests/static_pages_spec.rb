@@ -10,7 +10,7 @@ describe "StaticPages" do
 
     it "should have the right title" do
       visit '/static_pages/home'
-      expect(page).to have_title("Nomicator")
+      expect(page).to have_title("Welcome")
     end
   end
 
