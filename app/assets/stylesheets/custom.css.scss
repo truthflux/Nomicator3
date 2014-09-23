@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+/* colors */
+$logocolor: #C900FF;
+
 /* universal */
 
 html {
@@ -31,14 +34,12 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
   text-align: center;
 }
 
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
   color: #999;
@@ -55,16 +56,16 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #c900ff;
+  color: $logocolor;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   padding-left: 9px;
   font-weight: bold;
   line-height: 1;
+  &:hover {
+    color: $logocolor;
+    text-decoration: none;
+  }
 }
 
-#logo:hover {
-  color: #C900FF;
-  text-decoration: none;
-}

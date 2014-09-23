@@ -1,44 +1,21 @@
 require 'spec_helper'
 
 describe "StaticPages" do
+  subject { page }
+
   describe "Home page" do
+    before { visit root_path }
 
-    it "should contain text 'Nomicator'" do
-      visit '/static_pages/home'
-      expect(page).to have_content('Nomicator')
-    end
-
-    it "should have the right title" do
-      visit '/static_pages/home'
-      expect(page).to have_title("Welcome")
-    end
-  end
-
-  describe "Help page" do
-
-    it "should contain text 'Help'" do
-      visit '/static_pages/help'
-      expect(page).to have_content('Help')
-    end
-
-    it "should have the right title" do
-      visit '/static_pages/help'
-      expect(page).to have_title("Help")
-    end
+    it { should have_content('Nomicator') }
+    it { should have_title('Welcome') }
 
   end
 
-  describe "About page" do
+  describe "About" do
+    before { visit about_path }
 
-    it "should contain text 'About Nomicator'" do
-      visit '/static_pages/about'
-      expect(page).to have_content('About Nomicator')
-    end
-
-    it "should have the right title" do
-      visit '/static_pages/about'
-      expect(page).to have_title("About")
-    end
+    it { should have_content('About') }
+    it { should have_title('Nomicator | About') }
   end
 
 end
