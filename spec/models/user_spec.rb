@@ -35,7 +35,7 @@ describe User do
 
   describe "when email format is invalid" do
     it "should be invalid" do
-      addresses = %w[user@expl,com foo_at_example.org athr@bad.]
+      addresses = %w[user@expl,com ada@baa..op.org foo_at_example.org athr@bad.]
       addresses.each do |invalid_address|
         @user.email = invalid_address
         expect(@user).not_to be_valid
@@ -43,9 +43,9 @@ describe User do
     end
   end
 
-  describe "when email format is invalid" do
+  describe "when email format is valid" do
     it "should be invalid" do
-      addresses = %w[user@expl.com foo_barr-hmm@example.org athr@good.co.uk]
+      addresses = %w[user@expl.com foo_barr-hmm@example.org ada@baa.org athr@good.co.uk]
       addresses.each do |valid_address|
         @user.email = valid_address
         expect(@user).to be_valid
@@ -90,7 +90,6 @@ describe User do
       it { should_not eq user_for_invalid_pword }
       specify { expect(user_for_invalid_pword).to be_false
       }
-
     end
 
     describe "with a password that's too short" do

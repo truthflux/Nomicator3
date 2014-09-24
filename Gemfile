@@ -25,6 +25,9 @@ gem 'sass-rails', '4.0.3'
 gem 'bootstrap-sass', '3.2.0.2'
 gem 'sprockets', '2.11.0'
 
+# Use bcrypt for password hashing
+gem 'bcrypt', '3.1.7'
+
 # Use Uglifier as com.buttonpressor for JavaScript assets
 gem 'uglifier', '2.1.1'
 # Use CoffeeScript for .js.coffee assets and views
