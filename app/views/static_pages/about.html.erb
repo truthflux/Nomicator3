@@ -1,4 +1,54 @@
 <% provide(:title, 'About') %>
+<div class="row" xmlns="http://www.w3.org/1999/html">
+  <div class="container">
+    <h1>Nomicator is a game of Nomic</h1>
+    <blockquote class="text-left">
+      <p>
+        Nomic is a game in which changing the rules is a move. In that respect it differs from almost every other game.
+        The primary activity of Nomic is proposing changes in the rules, debating the wisdom of changing them in that
+        way, voting on the changes, deciding what can and cannot be done afterwards, and doing it. Even this core of the
+        game, of course, can be changed.
 
-<h1>About Nomicator</h1>
-<p>Nomicator is an attempt to create an easy to modify nomic engine using Ruby on Rails</p>
+        <footer>
+          Peter Suber, <cite title="The Paradox of Self-Amendment">The Paradox of Self-Amendment</cite>
+        </footer>
+      </p>
+    </blockquote>
+  </div>
+</div>
+<div class="row">
+
+  <div class="col-md-4">
+    <h2>What is Nomicator?</h2>
+
+    <p>
+      Nomicator is a game of <a href="http://en.wikipedia.org/wiki/Nomic">Nomic</a>. Nomic is game of law, voting and
+      creativity in which the rules
+      are continually adjusted by the actions of players. The game starts off with an initial ruleset, but where it goes
+      from there is up to the users. The initial rules largely set out a basic system for voting on and editing the
+      rules. For where the game is at now, you will need to look at the current <%= link_to "ruleset", "#" %>
+    </p>
+  </div>
+
+  <div class="col-md-4">
+    <h2>Grow-your-own</h2>
+
+    <p>
+      Nomic is a meta-game. In fact, all other games are a feasible position in Nomic.
+      This makes it especially difficult to make a simulator for Nomic without constant development.
+      Nomicator does not attempt to do this, and instead attempts to provide a flexible platform simulating the playing
+      of simple tabletop games alongside a system that simulates voting, often the most labour intensive parts.
+    </p>
+  </div>
+
+  <div class="col-md-4">
+    <h2>Roles and responsibilities</h2>
+
+    <p>
+      As such, you, the user have a very important role to play in the correct running of the game, just as you would
+      if sitting at a table playing. Beyond some basics, players must apply the rules themselves. Nomicator will not
+      do this for you. To assist this, Nomicator allows a player to have multiple "Roles" to facilitate this,
+      with many actions being possible in those roles instead of "Yourself".
+  </div>
+
+</div>
