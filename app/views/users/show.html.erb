@@ -8,12 +8,12 @@
         <%= @user.name %>
       </div>
       <div class="panel-body">
-        Joined on: <%= @user.created_at %>
+        Player since <%= time_ago_in_words(@user.created_at) %> ago
       </div>
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">
-        Roles
+        <%= @user.name %>'s roles
       </div>
       <div class="panel-body">
         Example Role 1

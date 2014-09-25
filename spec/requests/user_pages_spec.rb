@@ -20,4 +20,31 @@ describe "UserPages" do
     it { should have_title('Sign up') }
 
   end
+
+  describe "signup" do
+    before { visit signup_path }
+
+    let(:submit) { "Create account" }
+
+    describe "with no info" do
+      it "should not create an account" do
+        expect { click_button submit }.not_to change(User, :count)
+      end
+    end
+
+    describe "with valid sample info" do
+
+
+      before do
+        fill_in "Name", with: "Ernst Haddock"
+        fill_in "user_email", with: "haddock@example.com"
+        fill_in "user_password", with: "foobar"
+        fill_in "user_password_confirmation", with: "foobar"
+      end
+
+      it "should create an account" do
+        expect { click_button submit }.to change(User, :count).by(1)
+      end
+    end
+  end
 end
