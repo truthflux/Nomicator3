@@ -1,10 +1,10 @@
 <% provide(:title, 'Sign up') %>
-<br>
 <h1>Sign up</h1>
+<br>
 <div class="row">
   <div class="col col-md-6">
     <%= form_for(@user) do |f| %>
-        <%= render 'shared/error_messages' %>
+        <%= render 'shared/error_messages', object: f.object %>
         <div class="form-group">
           <%= f.label :name %>
           <%= f.text_field :name, class: 'form-control' %>
@@ -17,15 +17,15 @@
 
         <div class="form-group">
           <%= f.label :password %>
-          <%= f.password_field :password, class: 'form-control' %>
+          <%= f.text_field :password, class: 'form-control' %>
         </div>
 
         <div class="form-group">
-          <%= f.label :password_confirmation, "Re-type password" %>
+          <%= f.label :password_confirmation, "Confirmation" %>
           <%= f.password_field :password_confirmation, class: 'form-control' %>
         </div>
 
-        <%= f.submit "Create account", class: "btn btn-large btn-primary" %>
+        <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
 
     <% end %>
   </div>
