@@ -12,15 +12,37 @@
     </div>
     <div class="collapse navbar-collapse" id="main-navbar-collapse">
       <ul class="nav navbar-nav">
-        <%#TODO: Make these class = "active" when on the right page %>
+        <%#TODO: Make these class = "active" when on the right page     %>
         <li><%= link_to "Home", root_path %></li>
       </ul>
       <ul class="nav navbar-nav">
         <li><%= link_to "About", about_path %></li>
       </ul>
-      <ul class="nav navbar-nav">
-        <li><%= link_to "Sign in", signup_path %></li>
-      </ul>
+      <% if signed_in? %>
+          <%# TODO: Make this pretty %>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Profile", current_user %></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Players", "#" %></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Documents", "#" %></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Objects", "#" %></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+          </ul>
+
+
+      <% else %>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Sign in", signin_path %></li>
+          </ul>
+      <% end %>
+
     </div>
   </div>
 </header>

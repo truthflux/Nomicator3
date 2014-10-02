@@ -23,7 +23,7 @@ describe "StaticPages" do
     click_link "About"
     expect(page).to have_title('Nomicator | About')
     click_link "Sign in"
-    expect(page).to have_title('Nomicator | Sign up')
+    expect(page).to have_title('Nomicator | Sign in')
   end
 
 end
