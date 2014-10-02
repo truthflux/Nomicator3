@@ -24,7 +24,7 @@ describe "UserPages" do
   describe "signup" do
     before { visit signup_path }
 
-    let(:submit) { "Create account" }
+    let(:submit) { "Create my account" }
 
     describe "with no info" do
       it "should not create an account" do
