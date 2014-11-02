@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.3'
-
-#ruby-gemset=nomicator
+#ruby-gemset=nomicatorr
 
 
 # Use rspec, spring, selenium and capybara for testing
@@ -18,13 +16,12 @@ group :test do
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.8'
+gem 'rails', '4.2.0.beta4'
 # Use postgresql as the database for Active Record
 gem 'pg', '0.15.1'
 # Use SCSS for stylesheets, Bootstrap and fix sprockets version (Rails asset pipeline)
-gem 'sass-rails', '4.0.3'
+gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'bootstrap-sass', '3.2.0.2'
-gem 'sprockets', '2.11.0'
 
 # Use bcrypt for password hashing
 gem 'bcrypt', '3.1.7'
