@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 #ruby-gemset=nomicatorr
-
+ruby '2.1.1'
 
 # Use rspec, spring, selenium and capybara for testing
 group :development, :test do
@@ -15,10 +15,15 @@ group :test do
   gem 'factory_girl_rails', '4.2.0'
 end
 
+group :production do
+  gem 'unicorn',            '4.8.3'
+  gem 'rails_12factor',     '0.0.2'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0.beta4'
 # Use postgresql as the database for Active Record
-gem 'pg', '0.15.1'
+gem 'pg', '0.17.1'
 # Use SCSS for stylesheets, Bootstrap and fix sprockets version (Rails asset pipeline)
 gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'bootstrap-sass', '3.2.0.2'
@@ -53,7 +58,3 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-group :production do
-  gem 'rails_12factor', '0.0.2'
-end
